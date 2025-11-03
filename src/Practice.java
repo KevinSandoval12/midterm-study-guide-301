@@ -54,9 +54,24 @@ public class Practice {
     }
 
 
-    public static int evenOddDifference(int ){
+    public static int evenOddDifference(HashMap<Integer, Integer> map ){
+        int evenCount = 0;
+        int oddCount = 0;
 
-        return 0;
+        for (int key : map.keySet()){
+            if (key % 2 == 0){
+            evenCount++;
+        }
+            else {
+                oddCount++;
+            }
+        }
+
+        int dif = oddCount - evenCount;
+        if (dif < 0) {
+            dif = dif * -1;
+        }
+        return dif;
     }
 
 
