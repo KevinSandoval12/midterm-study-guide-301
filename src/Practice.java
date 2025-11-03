@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 import javax.print.DocFlavor.STRING;
 
@@ -30,7 +32,7 @@ public class Practice {
     public static String longestWord(ArrayList<String> words, String search){
         String longestString = "";
         for (String string : words) {
-            if (string.toLowerCase().substring(0,1) == search.toLowerCase()
+            if (string.toLowerCase().substring(0,1).equals(search.toLowerCase())
             && string.length() > longestString.length()){
                 longestString = string;
             }
@@ -38,6 +40,25 @@ public class Practice {
 
         return longestString;
     }
+
+    public static int wordLengthCount(HashSet<String> set, int min, int max){
+        int lengthCount = 0;
+
+        for (String str : set) {
+            if (str.length() > min && str.length() < max){
+                lengthCount++;
+            }
+            
+        }
+        return lengthCount;
+    }
+
+
+    public static int evenOddDifference(int ){
+
+        return 0;
+    }
+
 
 
 
