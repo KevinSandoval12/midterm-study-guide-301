@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 import org.junit.jupiter.api.Test;
@@ -87,7 +88,30 @@ public class PracticeTest {
         assertEquals(3, actual);
     }
 
-    
+    @Test
+    void testOddEvenDifferenceAllOdd(){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(1, 1);
+        map.put(3, 2);
+        map.put(5, 3);
+        map.put(7, 4);
+
+        int actual = Practice.evenOddDifference(map);
+        assertEquals(4, actual);
+    }
+
+        @Test
+    void testOddEvenDifferenceMixed(){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(1, 2);
+        map.put(2, 3);
+        map.put(3, 4);
+        map.put(4, 5);
+
+
+        int actual = Practice.evenOddDifference(map);
+        assertEquals(0, actual);
+    }
 
 
 
