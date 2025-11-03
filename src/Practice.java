@@ -75,6 +75,25 @@ public class Practice {
     }
 
 
+    public static int secondLargestNum(HashMap<Integer, Integer> map){
+        int secondLargest = 0;
+        int largest = 0;
+
+        for (int value : map.values()){
+            if (value > largest) {
+                secondLargest = largest;
+                largest = value;
+            } else if (value > secondLargest && value < largest) {
+                secondLargest = value;
+            }
+        }
+        if (secondLargest == largest) {
+            return 0;
+        }
+        return secondLargest;
+    }
+
+
 
 
 
