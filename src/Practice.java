@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+
+import javax.print.DocFlavor.STRING;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -7,13 +11,41 @@ public class Practice {
      */
     public static int maxDiff(int[] nums) {
         // TODO: implement this
-        return -1;
+        int min = nums[0];
+        int max = nums[0];
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+            if (nums[i] < min) {
+                min = nums[i];
+            }
+        }
+        return max - min;
     }
 
 
     // TODO: Implement the other methods from the study guide AND tests for each one
+    public static String longestWord(ArrayList<String> words, String search){
+        String longestString = "";
+        for (String string : words) {
+            if (string.toLowerCase().substring(0,1) == search.toLowerCase()
+            && string.length() > longestString.length()){
+                longestString = string;
+            }
+        }
+
+        return longestString;
+    }
+
+
+
 
     // For each method you are only required to implement it for one of the data
+    
+
+
     // structures. But use a different data structure for each method. For example,
     // do maxDiff with an array, the next question with a Set, etc.
 }
